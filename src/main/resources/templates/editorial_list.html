@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+          <table class="table">
+            
+            <thead>
+                
+                <tr>
+                    <th scope="col">Id Editorial</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Modificar</th>
+                </tr>
+                
+            </thead>
+            
+            <tbody th:each="editorial : ${editoriales}">
+                
+                <tr>
+                    <th scope="row" th:text="${editorial.id}"></th>
+                    <td th:text="${editorial.nombre}"></td>
+                    <td ><a th:href="@{/editorial/modificar/__${editorial.id}__}" ><i>MODIFICAR</i></a></td>
+                </tr>
+                
+            </tbody>
+            
+        </table>
+    </body>
+</html>
