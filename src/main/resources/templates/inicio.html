@@ -25,7 +25,15 @@
             </header>
 
             <section>
-                
+                <style>
+                    .card-img-top{
+                        width: 200px;
+                        height: 200px;
+                        border-color: green;
+                        border-radius: 50%;
+                    }
+                </style>
+
                 <aricle>
                     <div class="card" th:if="${session.usuariosession != null}" style="width: 18rem;">
                         <a><img th:src="@{/imagen/perfil/__${session.usuariosession.id}__}" class="card-img-top"></a>
